@@ -21,9 +21,12 @@ import Navbar from '../components/Navbar.astro';
 		<footer>Año 2023</footer>
 		<script>
 			const footer = document.querySelector('footer') as HTMLElement;
-			const currentTime = document.querySelector
-
-			footer.innerText = `Año ${new Date().getFullYear()}`;
+			const currentTimeParagraph = document.querySelector('#current-time') as HTMLParagraphElement;
+			
+			const currentYear: number = new Date().getFullYear();
+			
+			footer.innerText = `Año: ${currentYear}`;
+			currentTimeParagraph.innerText = `Momento actual real: ${new Date().toLocaleTimeString()}`;
 
 		</script>
 	</body>
